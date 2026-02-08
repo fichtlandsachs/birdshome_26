@@ -1,0 +1,13 @@
+[Unit]
+Description=Birdshome Timelapse Generator Timer
+Wants=birdshome-timelapse.service
+
+[Timer]
+# Generate timelapse daily at 23:00
+OnCalendar=daily
+OnCalendar=23:00
+Persistent=true
+AccuracySec=1min
+
+[Install]
+WantedBy=timers.target

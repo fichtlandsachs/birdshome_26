@@ -1,0 +1,24 @@
+[Unit]
+Description=Birdshome Motion Detection Service
+Requires=birdshome.service
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=@APP_USER@
+WorkingDirectory=@INSTALL_DIR@/backend
+EnvironmentFile=@INSTALL_DIR@/backend/.env
+
+# Wait for stream to be ready
+ExecStartPre=/bin/sleep 5
+
+ExecStart=@INSTALL_DIR@/backend/.venv/bin/python @INSTALL_DIR@/backend/scripts/run-motion.py
+Restart=on-failure
+RestartSec=15
+TimeoutStartSec=60
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

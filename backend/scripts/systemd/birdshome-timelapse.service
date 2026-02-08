@@ -1,0 +1,15 @@
+[Unit]
+Description=Birdshome Timelapse Generator
+Wants=network-online.target birdshome.service
+After=network-online.target birdshome.service
+Documentation=https://github.com/your-repo/birdshome
+
+[Service]
+Type=oneshot
+User=@APP_USER@
+WorkingDirectory=@INSTALL_DIR@/backend
+EnvironmentFile=@INSTALL_DIR@/backend/.env
+ExecStart=@INSTALL_DIR@/backend/.venv/bin/python @INSTALL_DIR@/backend/scripts/run-timelapse.py
+TimeoutStartSec=600
+StandardOutput=journal
+StandardError=journal

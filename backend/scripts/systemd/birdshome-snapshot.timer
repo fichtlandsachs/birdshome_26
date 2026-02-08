@@ -1,0 +1,12 @@
+[Unit]
+Description=Birdshome Snapshot Capture Timer
+Wants=birdshome-snapshot.service
+
+[Timer]
+# Capture snapshot every 5 minutes
+OnUnitActiveSec=1min
+AccuracySec=1s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,31 @@
+[Unit]
+Description=Birdshome HLS Stream (ffmpeg)
+Wants=network-online.target birdshome.service
+After=network-online.target birdshome.service
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=@APP_USER@
+WorkingDirectory=@INSTALL_DIR@/backend
+EnvironmentFile=@INSTALL_DIR@/backend/.env
+
+# Ensure output directory exists and is writable
+ExecStartPre=+/usr/bin/mkdir -p @INSTALL_DIR@/backend/app/static/hls
+ExecStartPre=+/usr/bin/chown -R @APP_USER@:@APP_USER@ @INSTALL_DIR@/backend/app/static/hls
+
+# Wait for backend to be ready
+ExecStartPre=/bin/sleep 3
+
+ExecStart=/opt/birdshome/backend/scripts/run-stream.sh
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=30
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

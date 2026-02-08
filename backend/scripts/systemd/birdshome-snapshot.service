@@ -1,0 +1,12 @@
+[Unit]
+Description=Birdshome Snapshot Capture
+
+[Service]
+Type=oneshot
+User=@APP_USER@
+WorkingDirectory=@INSTALL_DIR@/backend
+EnvironmentFile=@INSTALL_DIR@/backend/.env
+ExecStart=@INSTALL_DIR@/backend/.venv/bin/python @INSTALL_DIR@/backend/scripts/run-snapshot.py
+TimeoutStartSec=30
+StandardOutput=journal
+StandardError=journal

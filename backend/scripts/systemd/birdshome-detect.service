@@ -1,0 +1,13 @@
+[Unit]
+Description=Birdshome Bird Detection Service
+After=birdshome.service
+
+[Service]
+Type=oneshot
+User=@APP_USER@
+ExecStart=@INSTALL_DIR@/backend/.venv/bin/python @INSTALL_DIR@/backend/scripts/detect-birds.py
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

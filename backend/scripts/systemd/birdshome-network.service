@@ -1,0 +1,14 @@
+[Unit]
+Description=Birdshome Network Check and WiFi Fallback Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=@INSTALL_DIR@/backend/.venv/bin/python @INSTALL_DIR@/backend/scripts/check-network.py
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

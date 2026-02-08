@@ -1,0 +1,5 @@
+
+{
+  "name": "Birdshome: Smart Nestbox Monitor",
+  "description": "A web interface for managing and viewing a smart birdhouse. Features live video streaming, a gallery of recordings, and a comprehensive admin panel for system configuration on a Raspberry Pi."
+}

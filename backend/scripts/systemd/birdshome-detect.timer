@@ -1,0 +1,11 @@
+[Unit]
+Description=Birdshome Bird Detection Timer (every 10 minutes)
+Requires=birdshome-detect.service
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

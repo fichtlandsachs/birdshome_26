@@ -1,0 +1,22 @@
+[Unit]
+Description=Birdshome Backend (Gunicorn)
+Wants=network-online.target
+After=network-online.target nginx.service
+StartLimitBurst=3
+[Service]
+Type=simple
+User=@APP_USER@
+WorkingDirectory=@INSTALL_DIR@/backend
+EnvironmentFile=@INSTALL_DIR@/backend/.env
+# Scheduler should run in birdshome-jobs.service
+Environment=SCHEDULER_ENABLED=0
+ExecStart=@INSTALL_DIR@/backend/.venv/bin/gunicorn -w 2 -b 127.0.0.1:5000 --timeout 120 wsgi:app
+Restart=always
+RestartSec=5
+TimeoutStartSec=60
+
+# Wait for service to be ready
+ExecStartPost=/bin/sleep 2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "stream": "Live Stream",
+    "gallery": "Gallery",
+    "admin": "Admin",
+    "health": "System",
+    "logs": "Logs",
+    "logout": "Logout",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "liveStream": "Live Stream",
+    "recentPhotos": "Recent Photos",
+    "noPhotos": "No photos available",
+    "videos": "Videos",
+    "system": "System",
+    "cpu": "CPU",
+    "memory": "Memory",
+    "disk": "Disk",
+    "temperature": "Temperature",
+    "stream": {
+      "running": "Running",
+      "stopped": "Stopped",
+      "mode": "Mode"
+    }
+  },
+  "stream": {
+    "title": "Live Stream",
+    "hls": "HLS",
+    "webrtc": "WebRTC",
+    "ir": "IR",
+    "live": "LIVE",
+    "offline": "OFFLINE",
+    "recording": {
+      "title": "Recording",
+      "start": "Start Recording",
+      "stop": "Stop Recording",
+      "starting": "Starting...",
+      "stopping": "Stopping...",
+      "needStream": "Stream must be running to start recording",
+      "rec": "REC"
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "all": "All",
+    "birds": "With Birds",
+    "noBirds": "No Birds",
+    "photos": "Photos",
+    "videos": "Videos",
+    "timelapses": "Timelapses",
+    "noMedia": "No media found",
+    "delete": "Delete",
+    "deleteConfirm": "Really delete?"
+  },
+  "admin": {
+    "title": "Admin",
+    "settings": "Settings",
+    "save": "Save",
+    "saving": "Saving...",
+    "saved": "Saved",
+    "controls": "Controls",
+    "stream": {
+      "title": "Stream",
+      "start": "Start Stream",
+      "stop": "Stop Stream",
+      "starting": "Starting...",
+      "stopping": "Stopping..."
+    },
+    "motion": {
+      "title": "Motion Detection",
+      "start": "Start Motion Detection",
+      "stop": "Stop Motion Detection",
+      "starting": "Starting...",
+      "stopping": "Stopping...",
+      "status": "Status"
+    },
+    "upload": {
+      "title": "Upload",
+      "start": "Start Upload",
+      "test": "Test Connection",
+      "testing": "Testing...",
+      "uploading": "Uploading..."
+    }
+  },
+  "health": {
+    "title": "System Status",
+    "system": "System",
+    "services": "Services",
+    "healthChecks": "Health Checks",
+    "timers": "Timers",
+    "snapshot": "Snapshot",
+    "timelapse": "Timelapse",
+    "nextRun": "Next Run",
+    "lastRun": "Last Run",
+    "status": {
+      "ok": "OK",
+      "fail": "Error",
+      "running": "Running",
+      "stopped": "Stopped"
+    }
+  },
+  "logs": {
+    "title": "Logs",
+    "service": "Service",
+    "level": "Level",
+    "search": "Search...",
+    "lines": "Lines",
+    "refresh": "Refresh",
+    "all": "All"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Login",
+    "error": "Invalid credentials"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close"
+  }
+}

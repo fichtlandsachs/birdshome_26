@@ -1,0 +1,12 @@
+[Unit]
+Description=Birdshome Upload Timer
+After=network-online.target
+
+[Timer]
+# Run upload every 30 minutes (configurable via UPLOAD_INTERVAL_MIN in settings)
+OnBootSec=5min
+OnUnitActiveSec=30min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

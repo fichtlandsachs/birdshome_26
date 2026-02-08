@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "stream": "Live Stream",
+    "gallery": "Galerie",
+    "admin": "Admin",
+    "health": "System",
+    "logs": "Logs",
+    "logout": "Abmelden",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "liveStream": "Live Stream",
+    "recentPhotos": "Letzte Fotos",
+    "noPhotos": "Keine Fotos vorhanden",
+    "videos": "Videos",
+    "system": "System",
+    "cpu": "CPU",
+    "memory": "Speicher",
+    "disk": "Festplatte",
+    "temperature": "Temperatur",
+    "stream": {
+      "running": "Läuft",
+      "stopped": "Gestoppt",
+      "mode": "Modus"
+    }
+  },
+  "stream": {
+    "title": "Live Stream",
+    "hls": "HLS",
+    "webrtc": "WebRTC",
+    "ir": "IR",
+    "live": "LIVE",
+    "offline": "OFFLINE",
+    "recording": {
+      "title": "Aufzeichnung",
+      "start": "Aufzeichnung starten",
+      "stop": "Aufzeichnung stoppen",
+      "starting": "Starte...",
+      "stopping": "Stoppe...",
+      "needStream": "Stream muss laufen, um eine Aufzeichnung zu starten",
+      "rec": "REC"
+    }
+  },
+  "gallery": {
+    "title": "Galerie",
+    "all": "Alle",
+    "birds": "Mit Vögeln",
+    "noBirds": "Ohne Vögel",
+    "photos": "Fotos",
+    "videos": "Videos",
+    "timelapses": "Zeitraffer",
+    "noMedia": "Keine Medien gefunden",
+    "delete": "Löschen",
+    "deleteConfirm": "Wirklich löschen?"
+  },
+  "admin": {
+    "title": "Admin",
+    "settings": "Einstellungen",
+    "save": "Speichern",
+    "saving": "Speichert...",
+    "saved": "Gespeichert",
+    "controls": "Steuerung",
+    "stream": {
+      "title": "Stream",
+      "start": "Stream starten",
+      "stop": "Stream stoppen",
+      "starting": "Startet...",
+      "stopping": "Stoppt..."
+    },
+    "motion": {
+      "title": "Bewegungserkennung",
+      "start": "Bewegungserkennung starten",
+      "stop": "Bewegungserkennung stoppen",
+      "starting": "Startet...",
+      "stopping": "Stoppt...",
+      "status": "Status"
+    },
+    "upload": {
+      "title": "Upload",
+      "start": "Upload starten",
+      "test": "Verbindung testen",
+      "testing": "Teste...",
+      "uploading": "Lädt hoch..."
+    }
+  },
+  "health": {
+    "title": "Systemstatus",
+    "system": "System",
+    "services": "Dienste",
+    "healthChecks": "Gesundheitschecks",
+    "timers": "Timer",
+    "snapshot": "Schnappschuss",
+    "timelapse": "Zeitraffer",
+    "nextRun": "Nächster Lauf",
+    "lastRun": "Letzter Lauf",
+    "status": {
+      "ok": "OK",
+      "fail": "Fehler",
+      "running": "Läuft",
+      "stopped": "Gestoppt"
+    }
+  },
+  "logs": {
+    "title": "Logs",
+    "service": "Dienst",
+    "level": "Level",
+    "search": "Suchen...",
+    "lines": "Zeilen",
+    "refresh": "Aktualisieren",
+    "all": "Alle"
+  },
+  "login": {
+    "title": "Anmelden",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "submit": "Anmelden",
+    "error": "Ungültige Anmeldedaten"
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "yes": "Ja",
+    "no": "Nein",
+    "close": "Schließen"
+  }
+}

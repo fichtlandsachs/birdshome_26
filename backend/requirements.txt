@@ -1,0 +1,18 @@
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.7
+Flask-Login==0.6.3
+python-dotenv==1.0.1
+APScheduler==3.10.4
+gunicorn==22.0.0
+# passlib 1.7.4 is compatible with bcrypt 3.x.
+# bcrypt 4.x/5.x removed attributes passlib 1.7.4 expects and can trigger runtime errors.
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
+psutil==5.9.8
+opencv-python
+numpy
+
+# WebRTC streaming support (optional - install only if WebRTC mode is needed)
+# aiortc==1.9.0
+# av==12.0.0

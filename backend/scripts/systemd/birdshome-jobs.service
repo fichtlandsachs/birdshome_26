@@ -1,0 +1,25 @@
+[Unit]
+Description=Birdshome Jobs Worker (APScheduler)
+Wants=network-online.target
+After=network-online.target birdshome.service
+Requires=birdshome.service
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=@APP_USER@
+WorkingDirectory=@INSTALL_DIR@/backend
+EnvironmentFile=@INSTALL_DIR@/backend/.env
+Environment=SCHEDULER_ENABLED=1
+
+# Wait for backend database to be ready
+ExecStartPre=/bin/sleep 5
+
+ExecStart=@INSTALL_DIR@/backend/.venv/bin/python @INSTALL_DIR@/backend/jobs_worker.py
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=60
+
+[Install]
+WantedBy=multi-user.target
