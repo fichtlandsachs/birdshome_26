@@ -287,8 +287,8 @@ def udp_packets_arrive(udp_url: str, timeout_s: float = 2.0) -> bool:
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         sock.settimeout(timeout_s)
-        # Falls der Stream lokal eingespeist wird, ist 0.0.0.0 sinnvoll.
-        sock.bind(("0.0.0.0", port))
+        # Standardmäßig nur an die im URL angegebene Schnittstelle binden.
+        sock.bind((host, port))
         _data, _addr = sock.recvfrom(2048)
         return True
     except socket.timeout:

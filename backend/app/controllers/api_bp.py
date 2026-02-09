@@ -1222,7 +1222,8 @@ def daynight_stop():
         day_night_service.stop_monitoring()
         return jsonify({"ok": True})
     except Exception as e:
-        return jsonify({"ok": False, "error": str(e)}), 500
+        current_app.logger.exception("Failed to stop day/night monitoring")
+        return jsonify({"ok": False, "error": "Failed to stop day/night monitoring"}), 500
 
 
 @api.post("/control/daynight/check")
@@ -1239,8 +1240,8 @@ def daynight_check():
             "brightness": status.brightness
         })
     except Exception as e:
-        return jsonify({"ok": False, "error": str(e)}), 500
-
+        current_app.logger.exception("Failed to check/update day/night mode")
+        return jsonify({"ok": False, "error": "Failed to check/update day/night mode"}), 500
 
 @api.get("/control/recording/status")
 def recording_status():
@@ -1255,7 +1256,8 @@ def recording_status():
             "pid": status.pid
         })
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        current_app.logger.exception("Failed to get recording status")
+        return jsonify({"error": "Failed to get recording status"}), 500
 
 
 @api.post("/control/recording/start")
@@ -1267,7 +1269,8 @@ def recording_start():
         result = recording_service.start()
         return jsonify(result)
     except Exception as e:
-        return jsonify({"ok": False, "error": str(e)}), 500
+        current_app.logger.exception("Failed to start recording")
+        return jsonify({"ok": False, "error": "Failed to start recording"}), 500
 
 
 @api.post("/control/recording/stop")
@@ -1279,4 +1282,5 @@ def recording_stop():
         result = recording_service.stop()
         return jsonify(result)
     except Exception as e:
-        return jsonify({"ok": False, "error": str(e)}), 500
+        current_app.logger.exception("Failed to stop recording")
+        return jsonify({"ok": False, "error": "Failed to stop recording"}), 500
