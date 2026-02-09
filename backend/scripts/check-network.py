@@ -142,7 +142,7 @@ def connect_wifi(ssid: str, password: str) -> bool:
         logger.info(f"Successfully connected to {ssid}")
         return True
     else:
-        logger.error(f"Failed to connect to {ssid}: {err}")
+        logger.error(f"Failed to connect to WiFi network: {err}")
         return False
 
 
